@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iPhone X</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/callHistory.js"></script>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="phone-buttons">
+            <div class="phone-button1"></div>
+            <div class="phone-button2"></div>
+            <div class="phone-button3"></div>
+            <div class="phone-button4"></div>
+        </div>
+        <div class="camera-part">
+            <div>
+                <div class="mic"></div>
+                <div class="camera"></div>
+            </div>
+        </div>
+        <div class="display-container">
+            <span class="phonetime">04:51 PM</span>
+            <img class="phone-icons" src="img/icons.png" alt="icons">
+            <div class="screen">
+                <div class="screen-overlay">
+                </div>
+                <div class="clearfix">
+                    <a href="index.html">
+                        <img class="back-icon" src="img/back.png" height="50px">
+                    </a>
+                    <div class="save-icon disabled-button">
+                        <img src="img/save-icon.png" height="60px">
+                    </div>
+                </div>
+                
+                <div class="profile-pic">
+                </div>
+                <form class="contact-form">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" maxlength="16">
+                    <label for="date" >Date of Birth</label>
+                    <input type="text" id="date" placeholder="mm/dd/yyyy">
+                </form>
+                <canvas id="myChart" width="300" height="200"></canvas>
+                <div class="call-icon-container">
+                    <div class="numpad-button call-btn">
+                        <img src="img/call-icon.png" alt="call" width="20px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/contact.js"></script>
+</body>
+</html>

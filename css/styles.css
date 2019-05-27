@@ -1,0 +1,365 @@
+body {
+    font-family: 'Open sans', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.phone-frame {
+    position: relative;
+    width: 430px;
+    height: 860px;
+    border-radius: 50px;
+    border: 6px solid black;
+    background-color: #b6b6b6;
+    margin: 0 auto;
+}
+
+.phone-button1, .phone-button2, .phone-button3, .phone-button4 {
+    position: absolute;
+    width: 16px;
+    height: 80px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: -1;
+}
+
+.phone-button1 {
+    left: -10px;
+    top: 100px;
+    height: 60px;
+}
+
+.phone-button2 {
+    left: -10px;
+    top: 200px;
+}
+
+.phone-button3 {
+    left: -10px;
+    top: 290px;
+}
+
+.phone-button4 {
+    right: -10px;
+    top: 220px;
+}
+
+.camera-part {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 50px;
+    background-color: #b6b6b6;
+    border: 6px solid black;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.camera-part::before {
+    position: absolute;
+    top: -6px;
+    content: '';
+    display: block;
+    clear: both;
+    width: 120%;
+    height: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #b6b6b6;
+}
+
+.camera-part > div {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-content: space-between;
+}
+
+.camera {
+    width: 10px;
+    height: 10px;
+    border: 4px solid black;
+    border-radius: 100%;
+}
+
+.mic {
+    margin-right: 20px;
+    margin-top: 2px;
+    width: 60px;
+    height: 5px;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
+.display-container {
+    position: absolute;
+    width: 375px;
+    height: 812px;
+    background-color: #fff;
+    border: 6px solid black;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.phonetime {
+    display: block;
+    margin: 10px;
+    font-size: .9em;
+}
+
+.phone-icons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 60px;
+}
+
+.screen {
+    position: relative;
+    padding: 30px 20px;
+    height: 700px;
+}
+
+.contacts-nav {
+    margin-bottom: 20px;
+}
+
+.contacts-nav > a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+
+.contacts-nav > .active-tab {
+    text-decoration: underline;
+}
+
+.search-input, .numpad-input {
+    width: 100%;
+    padding: 10px 10px 10px 34px;
+    border: 1px solid #b6b6b6;
+    border-radius: 10px;
+}
+
+.search-input {
+    background: url(../img/search-icon.svg) no-repeat scroll 7px 7px;
+}
+
+.search-input:focus, .numpad-input:focus {
+    outline: none;
+}
+
+.numpad-input {
+    font-size: 1.5em;
+}
+
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.scroll-container {
+    max-height: 612px;
+    overflow-y: scroll;
+}
+
+.contacts-table td:not(:nth-child(2)) {
+    text-align: center;
+}
+
+.contacts-table td {
+    padding: 5px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.contacts-table tr:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+}
+
+.numpad-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 20;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #afcbff;
+    background-image: url('../img/numpad.png');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    cursor: pointer;
+}
+
+.numpad-icon:hover {
+    background-color: #9eb3da;
+}
+
+.save-icon {
+    float: right;
+    cursor: pointer;
+}
+
+.searched-box {
+    height: 180px;
+}
+
+.numpads {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 450px;
+}
+
+.numpad-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.call-icon-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.numpad-button {
+    font-size: 2em;
+    background-color: silver;
+    border: 1px solid black;
+    border-radius: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.call-icon-container .numpad-button {
+    padding: 17px 21px;
+    background-color: green;
+}
+
+.numpad-button:hover {
+    background-color: #629e9e;
+}
+
+.vrow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.vrow > div:not(:nth-child(2)) {
+    flex: 1;
+}
+
+.vrow > div:nth-child(2) {
+    flex: 5;
+}
+
+.vrow:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+}
+
+.vrow > div:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.vrow > div:nth-child(2) {
+    padding-left: 5px;
+}
+
+.vrow > div:not(:nth-child(2)) {
+    text-align: center;
+}
+
+.backspace-icon {
+    display: block;
+    position: absolute;
+    right: 30px;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    background: url('../img/backspace-icon.png') no-repeat;
+    background-size: auto 30px;
+    cursor: pointer;
+}
+
+.disabled-button {
+    opacity: .3;
+    cursor: initial;
+}
+
+.calling-msg {
+    display: none;
+    position: absolute;
+    top: -70px;
+    left: -50%;
+    padding: 20px 30px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+.screen-overlay {
+    display: none;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    z-index: 30;
+}
+
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+.vrow.dragElem {
+    opacity: 0.4;
+}
+.vrow.over {
+    border-top: 2px solid blue;
+}
+
+.profile-pic {
+    background-color: #d8d8d8;
+    text-align: center;
+    margin: 8px 0;
+}
+
+
+.contact-form > label {
+    display: block;
+    margin: 5px 0;
+}
+.contact-form > input {
+    width: 100%;
+    padding: 3px 5px;
+}
